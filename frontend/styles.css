@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* #game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+#turn-indicator {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    background-color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cell.empty {
+    background-color: #f9f9f9;
+}
+
+.cell.player1 {
+    background-color: #3498db;
+    color: white;
+}
+
+.cell.player2 {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#move-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#move-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#move-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
